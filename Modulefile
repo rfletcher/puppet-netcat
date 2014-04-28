@@ -1,0 +1,6 @@
+name         'rfletcher-netcat'
+version      '0.0.1'
+license      'MIT License'
+summary      'A puppet module for Netcat'
+description  'Install or remove Netcat'
+project_page 'https://github.com/rfletcher/puppet-netcat'
