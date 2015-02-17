@@ -23,9 +23,14 @@
 # Copyright 2014 Rick Fletcher
 #
 class netcat (
-  $ensure = 'present',
-) {
-  package { 'netcat':
-    ensure => $ensure,
+  $ensure = $netcat::params::package_ensure,
+  $name   = $netcat::params::package_name,
+) inherits netcat::params {
+
+  package { 'netcat' :
+    allow_virtual => false,
+    ensure        => $ensure,
+    name          => $name,
   }
+
 }
