@@ -11,7 +11,7 @@
 # === Examples
 #
 #  class { 'netcat':
-#    package_ensure => latest,
+#    ensure => latest,
 #  }
 #
 # === Authors
