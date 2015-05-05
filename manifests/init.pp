@@ -22,10 +22,16 @@
 #
 # Copyright 2014 Rick Fletcher
 #
-class netcat (
-  $ensure = 'present',
-) {
-  package { 'netcat':
-    ensure => $ensure,
-  }
+lass netcat {
+  
+    # determine the netcat package based on the operatingsystem fact
+    $netcat = $operatingsystem ? {
+        CentOS  => "nc",
+        default => "netcat",
+    }
+  
+    package { "$netcat":
+        ensure => "present",
+        alias  => "netcat",
+    }
 }
