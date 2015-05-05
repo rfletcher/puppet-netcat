@@ -22,7 +22,7 @@
 #
 # Copyright 2014 Rick Fletcher
 #
-lass netcat {
+class netcat {
   
     # determine the netcat package based on the operatingsystem fact
     $netcat = $operatingsystem ? {
